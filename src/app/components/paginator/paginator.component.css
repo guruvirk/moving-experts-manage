@@ -1,0 +1,38 @@
+.pager-bar {
+    text-align: end;
+}
+
+.pagination {
+    margin-top: 12px;
+    display: inline-block;
+  }
+  
+  .pagination button {
+    color: var(--primary);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border:0;
+    box-shadow: 0;
+    background: transparent;
+    font-size: 20px;
+    width: 50px;
+  }
+
+  @media (max-width: 800px){ 
+    .pagination button {
+        font-size: 20px;
+        width: auto;
+      }
+}
+  
+  .pagination button.active {
+    background: #2480fd !important;
+    color: var(--primary);
+    border-radius: 5px;
+  }
+  
+  .pagination button:hover:not(.active) {
+    background: transparent;
+    border-radius: 5px;
+  }

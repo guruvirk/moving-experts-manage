@@ -1,0 +1,106 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+}
+  
+.mat-form-field {
+    margin-top: 16px;
+}
+
+.heading {
+    font-weight: bold;
+}
+
+.mainContainer {
+  margin-top: 120px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.formContainer {
+  width: 70%;
+  margin-left: 15%;
+}
+
+::ng-deep .mat-vertical-stepper-header{
+  pointer-events: none !important;
+}
+
+::ng-deep .mat-vertical-content {
+  padding: 0 24px 24px 10px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2480fd !important;
+  font-weight: bold;
+}
+
+::ng-deep mat-label{
+  color: #2480fd !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  background: #2480fd !important;
+}
+
+::ng-deep .mat-select-arrow {
+  color: #2480fd !important;
+}
+
+::ng-deep .mat-form-field-ripple {
+  background: #2480fd !important;
+}
+
+::ng-deep .mat-form-field-underline::before {
+  background: #2480fd !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .formContainer {
+    width: 100%;
+    margin-left: 0;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  h6 {
+    font-size: 13px;
+  }
+  
+  p {
+    font-size: 11px;
+  }
+
+  .mainContainer {
+    font-size: 11px;
+  }
+}
+
+.active {
+  background-color: var(--accent) !important;
+  color: var(--primary) !important;
+}

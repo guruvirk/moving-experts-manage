@@ -1,0 +1,22 @@
+<processing-indicator *ngIf="isLoading"></processing-indicator>
+<div class="page">
+    <div class="container page">
+        <div class="loginCard">
+            <h4 style="margin-top: 20px;">Login</h4>
+            <mat-form-field class="full-width-input">
+                <mat-label>Email</mat-label>
+                <input matInput numbersOnly name="email" [(ngModel)]="email"
+                    [required]="true">
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="!isPassVisible ? 'password' : 'text'" name="password" [(ngModel)]="password"
+                    [required]="true">
+                <mat-icon (click)="isPassVisible=!isPassVisible" color="primary" matSuffix>remove_red_eye</mat-icon>
+            </mat-form-field>
+            <button (click)="login()" mat-raised-button color="accent"><b>Continue to Login</b></button>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>

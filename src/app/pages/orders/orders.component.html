@@ -1,0 +1,43 @@
+<processing-indicator *ngIf="isLoading"></processing-indicator>
+<div class="page">
+    <div class="header">
+        <span class="spacer"></span>
+        <h2><b>Orders</b></h2>
+        <span class="spacer"></span>
+    </div>
+    <br>
+    <div *ngIf="page && page.items && page.items.length" class="container page" style="min-height: 300px;">
+        <mat-card (click)="select(order)" *ngFor="let order of page.items" class="orderCard">
+            <div class="row" style="width: 100%; margin: 0;">
+                <div class="col-4 details" style="margin: 0; padding: 0;">
+                    <h5><b>{{order.date | date}} {{order.timeslot}}</b></h5>
+                    <h6><b>Ordered Id : </b>{{order.code}}</h6>
+                    <h6><b>Status : </b>{{order.status | titlecase}}</h6>
+                    <h6><b>Phone : </b>{{order.phone}}</h6>
+                    <h6><b>Email : </b>{{order.email}}</h6>
+                    <h6><b>Size : </b>{{order.size}}</h6>
+                </div>
+                <div class="col-4 details" style="margin: 0; padding: 0;">
+                    <h5><b>From</b></h5>
+                    <h6>{{order.where.special}}</h6>
+                    <h6><b>Floor : </b>{{order.where.floor}}</h6>
+                    <h6><b>Name : </b>{{order.where.name}}</h6>
+                    <h6><b>Phone : </b>{{order.where.phone}}</h6>
+                </div>
+                <div class="col-4 details" style="margin: 0; padding: 0;">
+                    <h5><b>To</b></h5>
+                    <h6>{{order.to.special}}</h6>
+                    <h6><b>Floor : </b>{{order.to.floor}}</h6>
+                    <h6><b>Name : </b>{{order.to.name}}</h6>
+                    <h6><b>Phone : </b>{{order.to.phone}}</h6>
+                </div>
+            </div>
+        </mat-card>
+        <div class="paginator">
+            <app-paginator #paginator [page]="this"></app-paginator>
+        </div>
+    </div>
+    <div *ngIf="page && (!page.items || !page.items.length)" class="empty">
+        <h4 class="emptyText">Oops ! You dont have any orders.</h4>
+    </div>
+</div>

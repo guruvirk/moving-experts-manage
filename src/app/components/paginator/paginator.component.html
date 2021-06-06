@@ -1,0 +1,10 @@
+<div class="pager-bar">
+  <div *ngIf="page.page.total && pages.length" class="pagination">
+    <button [disabled]="page.page.pageNo === 1" (click)="showPage(page.page.pageNo - 1)">&laquo;</button>
+    <button *ngFor="let eachPage of pages" [class.active]="page.page.pageNo === eachPage"
+      (click)="showPage(eachPage)"><span *ngIf="eachPage < 0">...</span>
+      <span *ngIf="eachPage > 0">{{eachPage}}</span></button>
+    <button [disabled]="page.page.pageNo === page.page.totalPages"
+      (click)="showPage(page.page.pageNo + 1)">&raquo;</button>
+  </div>
+</div>
