@@ -12,6 +12,7 @@ export class AppComponent {
   currentUser: User;
   currentTenant: Tenant;
   isMobile = false;
+  isProgress = false;
 
   constructor(public auth: RoleService) {
     this.auth.userChanges.subscribe((user) => {

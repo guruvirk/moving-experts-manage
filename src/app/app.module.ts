@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { MatButtonModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatNativeDateModule, MatProgressSpinnerModule, MatSelectModule, MatSnackBarModule, MatSpinner, MatStepperModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GooglePlacesDirective } from './directives/google-places.directive';
-import { GoogleAddressComponent } from './components/google-address/google-address.component';
 import { SnackBarComponent } from './services/ux.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProcessingIndicatorComponent } from './components/processing-indicator/processing-indicator.component';
@@ -20,8 +18,6 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
 @NgModule({
   declarations: [
     AppComponent,
-    GooglePlacesDirective,
-    GoogleAddressComponent,
     SnackBarComponent,
     ProcessingIndicatorComponent,
     LoginComponent,
@@ -49,7 +45,7 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
     HttpClientModule,
     MatCardModule
   ],
-  exports: [GooglePlacesDirective],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
