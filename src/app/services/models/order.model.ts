@@ -4,6 +4,7 @@ export class Order {
     email: string
     phone: number
     date: Date
+    createdOn: Date
     timeslot: string
     where: {
         special: string,
@@ -59,6 +60,7 @@ export class Order {
         this.id = obj.id
         this.code = obj.code
         this.date = obj.date
+        this.createdOn = obj.createdOn
         this.status = obj.status
         this.lastUpdate = obj.lastUpdate
         this.email = obj.email

@@ -4,5 +4,5 @@ export const environment = {
     "INVALID_DETAILS": "Invalid Details"
   },
   tenant: "cm",
-  url: 'https://comfortcare.co.nz/cm/api'
+  url: 'https://casadecor.online/cm/api'
 };

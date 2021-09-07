@@ -10,7 +10,8 @@
         <mat-card (click)="select(order)" *ngFor="let order of page.items" class="orderCard">
             <div class="row" style="width: 100%; margin: 0;">
                 <div class="col-4 details" style="margin: 0; padding: 0;">
-                    <h5><b>{{order.date | date}} {{order.timeslot}}</b></h5>
+                    <h5><b>Created On : </b>{{(order.createdOn || order.date) | date}}</h5>
+                    <h5><b>Date : </b>{{order.date | date}} {{order.timeslot}}</h5>
                     <h6><b>Ordered Id : </b>{{order.code}}</h6>
                     <h6><b>Status : </b>{{order.status | titlecase}}</h6>
                     <h6><b>Phone : </b>{{order.phone}}</h6>

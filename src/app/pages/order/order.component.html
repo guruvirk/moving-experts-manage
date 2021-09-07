@@ -18,7 +18,10 @@
     <mat-card *ngIf="order" class="detailsCard panel">
         <div class="row primaryColor auto" style="width: 100%;height: 100%; margin-bottom: 10px;">
             <div class="col-md-6 auto">
-                <h5><b>{{order.date | date}} {{order.timeslot}}</b></h5>
+                <h5><b>Created On : </b>{{(order.createdOn || order.date) | date}}</h5>
+            </div>
+            <div class="col-md-6 auto">
+                <h5><b>Date : </b>{{order.date | date}} {{order.timeslot}}</h5>
             </div>
             <div class="col-md-6 auto">
                 <h6><b>Phone : </b>{{order.phone}}</h6>
