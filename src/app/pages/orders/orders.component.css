@@ -33,3 +33,7 @@ h6 {
 .details h6 {
     margin-top: 10px;
 }
+
+::ng-deep .mat-form-field-flex{
+    background-color: white !important; 
+}

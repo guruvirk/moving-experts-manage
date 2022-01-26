@@ -24,7 +24,7 @@
                 <h5><b>Date : </b>{{order.date | date}} {{order.timeslot}}</h5>
             </div>
             <div class="col-md-6 auto">
-                <h6><b>Phone : </b>{{order.phone}}</h6>
+                <h6><b>Phone : </b>0{{order.phone}}</h6>
             </div>
             <div class="col-md-6 auto">
                 <h6><b>Email : </b>{{order.email}}</h6>
@@ -94,7 +94,7 @@
                 <h6>{{order.where.special}}</h6>
                 <h6><b>Floor : </b>{{order.where.floor}}</h6>
                 <h6><b>Name : </b>{{order.where.name}}</h6>
-                <h6><b>Phone : </b>{{order.where.phone}}</h6>
+                <h6><b>Phone : </b>0{{order.where.phone}}</h6>
                 <h6><b>Vehicle Access : </b>{{order.where.vehicleAccess}}</h6>
                 <h6><b>Access To Home : </b>{{order.where.accessToHome}}</h6>
                 <h6 *ngIf="order.where.isParkingAway"><b>Parking Away</b></h6>
@@ -105,7 +105,7 @@
                 <h6>{{order.to.special}}</h6>
                 <h6><b>Floor : </b>{{order.to.floor}}</h6>
                 <h6><b>Name : </b>{{order.to.name}}</h6>
-                <h6><b>Phone : </b>{{order.to.phone}}</h6>
+                <h6><b>Phone : </b>0{{order.to.phone}}</h6>
                 <h6><b>Vehicle Access : </b>{{order.to.vehicleAccess}}</h6>
                 <h6><b>Access To Home : </b>{{order.to.accessToHome}}</h6>
                 <h6 *ngIf="order.to.isParkingAway"><b>Parking Away</b></h6>

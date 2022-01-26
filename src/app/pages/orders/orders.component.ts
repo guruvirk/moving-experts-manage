@@ -26,6 +26,8 @@ export class OrdersComponent implements OnInit, OnDestroy, IPager<Order> {
     isSelected: boolean,
     label: String
   }[];
+  status: String
+  sort = 'new'
 
   @ViewChild('paginator', null)
   paginatorComponent: PaginatorComponent;
@@ -74,6 +76,18 @@ export class OrdersComponent implements OnInit, OnDestroy, IPager<Order> {
     } else {
       this.query['offset'] = 0
     }
+    
+    if (this.status) {
+      this.query['status'] = this.status
+    } else {
+      delete this.query['status']
+    }
+
+    if (this.sort) {
+      this.query['sort'] = this.sort
+    } else {
+      delete this.query['status']
+    }
     this.api.search(this.query).subscribe(page => {
       this.page = page
       if (page.items && page.items.length) {
@@ -93,8 +107,25 @@ export class OrdersComponent implements OnInit, OnDestroy, IPager<Order> {
     })
   }
 
+  reset() {
+    this.status = null
+    this.sort = 'new'
+    this.get()
+  }
+
   select(order: Order) {
     this.router.navigate(["/order", order.id])
+  }
+
+  delete(order: Order) {
+    this.isLoading = true;
+    this.api.update(order.id, { status: 'inactive' }).subscribe(item => {
+      order = item
+      this.isLoading = false;
+      this.get()
+    }, err => {
+      this.isLoading = false;
+    })
   }
 
   showPage(pageNo: number) {
