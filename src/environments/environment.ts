@@ -9,7 +9,7 @@ export const environment = {
     "INVALID_DETAILS": "Invalid Details",
   },
   // url: 'http://localhost:8080/api',
-  url: 'https://casadecor.online/cm/api'
+  url: 'https://comfortcare.co.nz/cm/api'
 };
 
 /*
