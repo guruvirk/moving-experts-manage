@@ -37,7 +37,7 @@
         <mat-card *ngFor="let order of page.items" class="orderCard">
             <div style="width: 100%; text-align: right;">
                 <button class="statusButton" (click)="delete(order)" mat-raised-button color="warn">
-                    <mat-icon>delete</mat-icon> Delete Order 
+                    <mat-icon>delete</mat-icon> Delete Order
                 </button>
             </div>
             <div (click)="select(order)" class="row" style="width: 100%; margin: 0;">
@@ -45,26 +45,24 @@
                     <h5><b>Created On : </b>{{(order.createdOn || order.date) | date}}</h5>
                     <h5><b>Date : </b>{{order.date | date}} {{order.timeslot}}</h5>
                     <h6><b>Ordered Id : </b>{{order.code}}</h6>
-                    <h6><b>Phone : </b>0{{order.phone}}</h6>
-                    <h6><b>Email : </b>{{order.email}}</h6>
                     <h6><b>Size : </b>{{order.size}}</h6>
+                    <br>
+                    <h5><b>Status : {{order.status | titlecase}}</b></h5>
                 </div>
                 <div class="col-8 details" style="margin: 0; padding: 0;">
-                    <h5><b>Status : {{order.status | titlecase}}</b></h5>
+                    <h5><b>Name : {{order.name}}</b></h5>
                     <div class="row" style="width: 100%; margin: 0;">
                         <div class="col-6 details" style="margin: 0; padding: 0;">
+                            <h6><b>Phone : </b>0{{order.phone}}</h6>
+                            <br>
                             <h5><b>From</b></h5>
                             <h6>{{order.where.special}}</h6>
-                            <h6><b>Floor : </b>{{order.where.floor}}</h6>
-                            <h6><b>Name : </b>{{order.where.name}}</h6>
-                            <h6><b>Phone : </b>0{{order.where.phone}}</h6>
                         </div>
                         <div class="col-6 details" style="margin: 0; padding: 0;">
+                            <h6><b>Email : </b>{{order.email}}</h6>
+                            <br>
                             <h5><b>To</b></h5>
                             <h6>{{order.to.special}}</h6>
-                            <h6><b>Floor : </b>{{order.to.floor}}</h6>
-                            <h6><b>Name : </b>{{order.to.name}}</h6>
-                            <h6><b>Phone : </b>0{{order.to.phone}}</h6>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 export class Order {
     id: string
+    name: string
     code: string
     email: string
     phone: number
@@ -58,6 +59,7 @@ export class Order {
             return;
         }
         this.id = obj.id
+        this.name = obj.name
         this.code = obj.code
         this.date = obj.date
         this.createdOn = obj.createdOn
