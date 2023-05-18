@@ -1,6 +1,6 @@
 ## Build Command
 
-> ng build --prod --base-href "https://manage.comfortmovers.co.nz/"
+> ng build --prod --base-href "https://manage.movingexperts.co.nz/"
 
 ## Deploy Command
 

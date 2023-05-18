@@ -4,12 +4,12 @@
 
 export const environment = {
   production: false,
-  tenant: "cm",
+  tenant: "me",
   error: {
     "INVALID_DETAILS": "Invalid Details",
   },
   // url: 'http://localhost:8080/api',
-  url: 'https://comfortcare.co.nz/cm/api'
+  url: 'https://comfortcare.co.nz/me/api'
 };
 
 /*

@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('cm-manage app is running!');
+    expect(page.getTitleText()).toEqual('moving-experts-manage app is running!');
   });
 
   afterEach(async () => {

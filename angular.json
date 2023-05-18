@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cm-manage": {
+    "moving-experts-manage": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cm-manage:build"
+            "browserTarget": "moving-experts-manage:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cm-manage:build:production"
+              "browserTarget": "moving-experts-manage:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cm-manage:build"
+            "browserTarget": "moving-experts-manage:build"
           }
         },
         "test": {
@@ -115,16 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cm-manage:serve"
+            "devServerTarget": "moving-experts-manage:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cm-manage:serve:production"
+              "devServerTarget": "moving-experts-manage:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "cm-manage"
+  "defaultProject": "moving-experts-manage"
 }

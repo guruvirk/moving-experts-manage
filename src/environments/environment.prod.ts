@@ -3,6 +3,6 @@ export const environment = {
   error: {
     "INVALID_DETAILS": "Invalid Details"
   },
-  tenant: "cm",
-  url: 'https://comfortcare.co.nz/cm/api'
+  tenant: "me",
+  url: 'https://comfortcare.co.nz/me/api'
 };

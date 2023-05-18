@@ -18,10 +18,10 @@
     <mat-card *ngIf="order" class="detailsCard panel">
         <div class="row primaryColor auto" style="width: 100%;height: 100%; margin-bottom: 10px;">
             <div class="col-md-6 auto">
-                <h5><b>Created On : </b>{{(order.createdOn || order.date) | date}}</h5>
+                <h5><b>Created On : </b>{{order.createdOn | date}}</h5>
             </div>
             <div class="col-md-6 auto">
-                <h5><b>Date : </b>{{order.date | date}} {{order.timeslot}}</h5>
+                <h5><b>Date : </b>{{order.date}}</h5>
             </div>
             <div class="col-md-6 auto">
                 <h5><b>Name : </b>{{order.name}}</h5>
@@ -60,18 +60,18 @@
         <div class="row primaryColor auto"
             style="width: 100%;height: 100%; margin-bottom: 10px;border-top: 2px solid #2480fd;">
             <div class="col-md-6 auto">
-                <h6><b>Additional Info : </b>{{order.additionalInfo}}</h6>
+                <h6><b>Notes : </b>{{order.notes}}</h6>
             </div>
         </div>
         <div class="row primaryColor auto"
             style="width: 100%;height: 100%; margin-bottom: 10px;border-top: 2px solid #2480fd;">
             <div class="col-md-6 auto">
-                <h5><b>From</b></h5>
-                <h6>{{order.where.special}}</h6>
+                <h5><b>Pickup Address</b></h5>
+                <h6>{{order.pickupAddress}}</h6>
             </div>
             <div class="col-md-6 auto">
-                <h5><b>To</b></h5>
-                <h6>{{order.to.special}}</h6>
+                <h5><b>Delivery Address</b></h5>
+                <h6>{{order.deliveryAddress}}</h6>
             </div>
         </div>
     </mat-card>
@@ -80,10 +80,10 @@
 <div *ngIf="order" style="visibility: hidden;" id="page">
     <div style="margin-top: 20px; width: 100%; text-align: center;">
         <div style="padding: 5px; text-align: center;">
-            <h3><b>Comfort Movers Order Details - {{order.code}}</b></h3>
+            <h3><b>Moving Experts Order Details - {{order.code}}</b></h3>
             <div style="width: 100%;height: 160px;border-top: 2px solid black;padding-top: 10px;">
                 <div style="float: left;width: 45%;">
-                    <h5><b>{{order.date | date}} {{order.timeslot}}</b></h5>
+                    <h5><b>{{order.date}}</b></h5>
                     <h5><b>Email : </b>{{order.email}}</h5>
                     <h5><b>Size : </b>{{order.size}}</h5>
                 </div>
@@ -94,16 +94,16 @@
                 </div>
             </div>
             <div style="width: 100%;height: 60px;border-top: 2px solid black;">
-                <h6><b>Additional Info : </b>{{order.additionalInfo}}</h6>
+                <h6><b>Notes : </b>{{order.notes}}</h6>
             </div>
             <div style="width: 100%;height: 100px;border-top: 2px solid black;padding-top: 10px;">
                 <div style="float: left;width: 45%;">
-                    <h5><b>From</b></h5>
-                    <h6>{{order.where.special}}</h6>
+                    <h5><b>Pickup Address</b></h5>
+                    <h6>{{order.pickupAddress}}</h6>
                 </div>
                 <div style="float: left;width: 45%;">
-                    <h5><b>To</b></h5>
-                    <h6>{{order.to.special}}</h6>
+                    <h5><b>Delivery Address</b></h5>
+                    <h6>{{order.deliveryAddress}}</h6>
                 </div>
             </div>
         </div>

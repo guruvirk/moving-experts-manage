@@ -42,8 +42,8 @@
             </div>
             <div (click)="select(order)" class="row" style="width: 100%; margin: 0;">
                 <div class="col-4 details" style="margin: 0; padding: 0;">
-                    <h5><b>Created On : </b>{{(order.createdOn || order.date) | date}}</h5>
-                    <h5><b>Date : </b>{{order.date | date}} {{order.timeslot}}</h5>
+                    <h5><b>Created On : </b>{{order.createdOn | date}}</h5>
+                    <h5><b>Date : </b>{{order.date}}</h5>
                     <h6><b>Ordered Id : </b>{{order.code}}</h6>
                     <h6><b>Size : </b>{{order.size}}</h6>
                     <br>
@@ -55,14 +55,14 @@
                         <div class="col-6 details" style="margin: 0; padding: 0;">
                             <h6><b>Phone : </b>0{{order.phone}}</h6>
                             <br>
-                            <h5><b>From</b></h5>
-                            <h6>{{order.where.special}}</h6>
+                            <h5><b>Pickup Address</b></h5>
+                            <h6>{{order.pickupAddress}}</h6>
                         </div>
                         <div class="col-6 details" style="margin: 0; padding: 0;">
                             <h6><b>Email : </b>{{order.email}}</h6>
                             <br>
-                            <h5><b>To</b></h5>
-                            <h6>{{order.to.special}}</h6>
+                            <h5><b>Delivery Address</b></h5>
+                            <h6>{{order.deliveryAddress}}</h6>
                         </div>
                     </div>
                 </div>
